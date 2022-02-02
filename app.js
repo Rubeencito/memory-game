@@ -55,6 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const grid = document.querySelector('.grid')
   const resultDisplay = document.querySelector('#result')
+  let videsQueTens = 4
+  let vidas = document.getElementById("vidas")
   let cardsChosen = []
   let cardsChosenId = []
   let cardsWon = []
@@ -80,6 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
       alert('You have clicked the same image!')
+      videsQueTens = videsQueTens - 1
+      vidas.innerHTML = videsQueTens
     }
     else if (cardsChosen[0] === cardsChosen[1]) {
       alert('You found a match')
@@ -92,6 +96,11 @@ document.addEventListener('DOMContentLoaded', () => {
       cards[optionOneId].setAttribute('src', 'images/blank.png')
       cards[optionTwoId].setAttribute('src', 'images/blank.png')
       alert('Sorry, try again')
+      videsQueTens = videsQueTens - 1
+      vidas.innerHTML = videsQueTens
+    }
+    if (videsQueTens == 0) {
+      alert ('Has perdut Ruben Huertas Gonzalez!')
     }
     cardsChosen = []
     cardsChosenId = []
@@ -114,3 +123,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   createBoard()
 })
+
+
+
