@@ -10,8 +10,22 @@
 
   <h3>Score:<span id="result"></span></h3>
 
-  <div class="grid">
+  <div class="grid" onmouseover="cambiarDeColorAzul()" onmouseout="cambiarDeColorVerde()">
+
   </div>
+  <script language="JavaScript">
+
+    function cambiarDeColorAzul ()
+    {
+      result.style.color = "blue";
+    }
+    
+    function cambiarDeColorVerde ()
+    {
+      result.style.color = "green";
+    }
+
+    </script>
 
 </body>
 </html>
